@@ -1,6 +1,5 @@
 :root {
   --quattrocento-font: "Quattrocento", serif;
-  /* DESKTOP FONTS */
   --quattrocento-desktop: 152px;
   --page-padding-desktop: 48px;
 }
@@ -8,9 +7,13 @@
 
 #portfolio-page {
   padding: var(--page-padding-desktop);
-  border-left: 1px solid var(--black);
-  border-right: 1px solid var(--black);
   overflow-x: hidden;
+}
+
+
+#portfolio-covers #food,
+#portfolio-covers #portraits {
+  height: 48%;
 }
 
 
@@ -45,7 +48,7 @@
   bottom: 0;
   width: 100%;
   background-color: rgba(240, 248, 255, 0.468);
-  height: 10%;
+  height: 64px;
   font: var(--quattrocento-font);
   font-size: 30px;
   color: var(--black);
@@ -54,7 +57,7 @@
 
 #food .cover-description,
 #portraits .cover-description {
-  height: 15%;
+  height: 48px;
 }
 
 
@@ -67,10 +70,6 @@
 #portfolio-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 45%;
-}
-
-
-#food {
-  margin-bottom: 16px;
 }
