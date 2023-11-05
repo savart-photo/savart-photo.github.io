@@ -365,6 +365,9 @@ footer #icons svg {
 
 /* Moving main text above image */
 @media screen and (max-width: 743px) and (min-width: 0px) {
+  body {
+    overflow-y: scroll;
+  }
 
   #main-page,
   #about-page,
