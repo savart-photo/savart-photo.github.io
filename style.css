@@ -71,8 +71,7 @@ body {
   padding: 0 var(--xl-frame);
   background-color: var(--body-bgc);
   animation: fadein 0.8s ease-in;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 
