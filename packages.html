@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Quattrocento&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <script defer src="./main.js"></script>
-    <title>SavArt Photo Packages</title>
-  </head>
-  <body>
-    <header class="header">
-      <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <a href="#"><li>HOME</li></a>
-            <a href="#"><li>ABOUT</li></a>
-            <a href="#"><li>PORTFOLIO</li></a>
-            <a href="#"><li>PACKAGES</li></a>
-            <a href="#"><li>CONTACTS</li></a>
-          </ul>
-        </div>
-      </nav>
-      <ui class="links">
-        <li><a href="./index.html">HOME</a></li>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./portfolio.html">PORTFOLIO</a></li>
-        <li><a href="./packages.html">PACKAGES</a></li>
-        <li><a href="http://">CONTACTS</a></li>
-      </ui>
-      <div class="title">
-        <h1>PACKAGES</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Quattrocento&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/packages.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./main.js"></script>
+  <title>SavArt Photo Packages</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="#">
+            <li>HOME</li>
+          </a>
+          <a href="#">
+            <li>ABOUT</li>
+          </a>
+          <a href="#">
+            <li>PORTFOLIO</li>
+          </a>
+          <a href="#">
+            <li>PACKAGES</li>
+          </a>
+          <a href="#">
+            <li>CONTACTS</li>
+          </a>
+        </ul>
       </div>
-    </header>
-    <main id="packages-page">
+    </nav>
+    <ui class="links">
+      <li><a href="./index.html">HOME</a></li>
+      <li><a href="./about.html">ABOUT</a></li>
+      <li><a href="./portfolio.html">PORTFOLIO</a></li>
+      <li><a href="./packages.html">PACKAGES</a></li>
+      <li><a href="http://">CONTACTS</a></li>
+    </ui>
+    <div class="title">
+      <h1>PACKAGES</h1>
+    </div>
+  </header>
+  <div id="scrollable-page-content">
+    <div id="packages-page">
       <div id="groupped-packages">
         <div class="package-card" id="first-card">
           <img src="./assets/packages/food.png" alt="" />
@@ -60,9 +72,11 @@
             splendor and significance of your product.
           </p>
 
+
           <button class="book-btn">BOOK A SHOOTING</button>
         </div>
       </div>
+
 
       <div class="package-card" id="third-card">
         <img src="./assets/packages/family.png" alt="" />
@@ -72,8 +86,12 @@
           those cherished moments of familial happiness.
         </p>
 
+
         <button class="book-btn">BOOK A SHOOTING</button>
       </div>
-    </main>
-  </body>
+    </div>
+    <footer>Some text here</footer>
+  </div>
+</body>
+
 </html>

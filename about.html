@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Quattrocento&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <script defer src="./main.js"></script>
-    <title>SavArt Photo About</title>
-  </head>
-  <body>
-    <header class="header">
-      <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <a href="#"><li>HOME</li></a>
-            <a href="#"><li>ABOUT</li></a>
-            <a href="#"><li>PORTFOLIO</li></a>
-            <a href="#"><li>PACKAGES</li></a>
-            <a href="#"><li>CONTACTS</li></a>
-          </ul>
-        </div>
-      </nav>
-      <ui class="links">
-        <li><a href="./index.html">HOME</a></li>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./portfolio.html">PORTFOLIO</a></li>
-        <li><a href="./packages.html">PACKAGES</a></li>
-        <li><a href="http://">CONTACTS</a></li>
-      </ui>
-      <div class="title">
-        <h1>ABOUT</h1>
-        <h2>ME</h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Quattrocento&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/about.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./main.js"></script>
+  <title>SavArt Photo About</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="#">
+            <li>HOME</li>
+          </a>
+          <a href="#">
+            <li>ABOUT</li>
+          </a>
+          <a href="#">
+            <li>PORTFOLIO</li>
+          </a>
+          <a href="#">
+            <li>PACKAGES</li>
+          </a>
+          <a href="#">
+            <li>CONTACTS</li>
+          </a>
+        </ul>
       </div>
-    </header>
-    <main id="about-page">
+    </nav>
+    <ui class="links">
+      <li><a href="./index.html">HOME</a></li>
+      <li><a href="./about.html">ABOUT</a></li>
+      <li><a href="./portfolio.html">PORTFOLIO</a></li>
+      <li><a href="./packages.html">PACKAGES</a></li>
+      <li><a href="http://">CONTACTS</a></li>
+    </ui>
+    <div class="title">
+      <h1>ABOUT</h1>
+      <h2>ME</h2>
+    </div>
+  </header>
+  <div id="scrollable-page-content">
+    <div id="about-page">
       <div id="about-description">
         <div id="greeting">
           <h2>Hello there!</h2>
@@ -58,16 +70,20 @@
             immortalizing the moments of familial bliss.
           </div>
 
+
           <div id="part-two">
             I've delved into the tenderness of enamored couples, the first
-            tender moments of newborns, and embarked on creative experiments in
-            object and culinary photography.
+            tender moments of newborns, and embarked on creative experiments
+            in object and culinary photography.
           </div>
         </div>
       </div>
       <div id="about-photo">
         <img src="./assets/about/aboutMe.png" alt="" />
       </div>
-    </main>
-  </body>
+    </div>
+    <footer>Some text here</footer>
+  </div>
+</body>
+
 </html>

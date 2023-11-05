@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Quattrocento&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <script defer src="./main.js"></script>
-    <title>SavArt Photo</title>
-  </head>
-  <body>
-    <header class="header">
-      <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <a href="#"><li>HOME</li></a>
-            <a href="#"><li>ABOUT</li></a>
-            <a href="#"><li>PORTFOLIO</li></a>
-            <a href="#"><li>PACKAGES</li></a>
-            <a href="#"><li>CONTACTS</li></a>
-          </ul>
-        </div>
-      </nav>
-      <ui class="links">
-        <li><a href="./index.html">HOME</a></li>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./portfolio.html">PORTFOLIO</a></li>
-        <li><a href="./packages.html">PACKAGES</a></li>
-        <li><a href="http://">CONTACTS</a></li>
-      </ui>
-      <div class="title">
-        <h1>SavArt</h1>
-        <h2>PHOTO</h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Quattrocento&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/overview.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./main.js"></script>
+  <title>SavArt Photo</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="#">
+            <li>HOME</li>
+          </a>
+          <a href="#">
+            <li>ABOUT</li>
+          </a>
+          <a href="#">
+            <li>PORTFOLIO</li>
+          </a>
+          <a href="#">
+            <li>PACKAGES</li>
+          </a>
+          <a href="#">
+            <li>CONTACTS</li>
+          </a>
+        </ul>
       </div>
-    </header>
-    <main id="main-page">
+    </nav>
+    <ui class="links">
+      <li><a href="./index.html">HOME</a></li>
+      <li><a href="./about.html">ABOUT</a></li>
+      <li><a href="./portfolio.html">PORTFOLIO</a></li>
+      <li><a href="./packages.html">PACKAGES</a></li>
+      <li><a href="http://">CONTACTS</a></li>
+    </ui>
+    <div class="title" id="main-title">
+      <h1>SavArt</h1>
+      <h2>PHOTO</h2>
+    </div>
+  </header>
+  <div id="scrollable-page-content">
+    <div id="main-page">
       <div id="main-photo">
         <img src="./assets/main/main.png" alt="" />
       </div>
@@ -61,6 +73,9 @@
         </p>
         <img id="verticalMain" src="./assets/main/verticalMain.png" alt="" />
       </div>
-    </main>
-  </body>
+    </div>
+    <footer>Some text here</footer>
+  </div>
+</body>
+
 </html>

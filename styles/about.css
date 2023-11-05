@@ -1,0 +1,49 @@
+:root {
+  --outfit-font: "Outfit", sans-serif;
+  --quattrocento-font: "Quattrocento", serif;
+  --page-padding-desktop: 48px;
+}
+
+
+#about-page {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--page-padding-desktop);
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
+}
+
+
+#about-description {
+  width: 40%;
+}
+
+
+#about-photo {
+  width: 50%;
+}
+
+
+#about-photo img {
+  width: 100%;
+  object-fit: contain;
+}
+
+
+#about-page #greeting h2 {
+  font-family: var(--quattrocento-font);
+  font-size: 88px;
+  font-weight: 200;
+}
+
+
+#about-page #greeting-text {
+  margin-top: 72px;
+  font-family: var(--outfit-font);
+  font-size: 18px;
+}
+
+
+#about-page #greeting-text #part-two {
+  margin-top: 20px;
+}

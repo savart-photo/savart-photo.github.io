@@ -1,0 +1,60 @@
+:root {
+  --body-bgc: #ebe9e7;
+  --outfit-font: "Outfit", sans-serif;
+  --page-padding-desktop: 48px;
+}
+
+
+#main-page {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: var(--page-padding-desktop);
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
+}
+
+
+#main-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+
+#main-photo {
+  width: 65%;
+  height: 100%;
+}
+
+
+#main-photo-desctiption {
+  width: 34%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+
+#main-photo-desctiption img {
+  object-position: top left;
+}
+
+
+#main-description-text {
+  position: absolute;
+  top: 0;
+  margin-top: 3vw;
+  width: 55%;
+  font-family: var(--outfit-font);
+  color: var(--body-bgc);
+  font-size: 18px;
+}
+
+
+#vertical-main-page {
+  display: none;
+}
