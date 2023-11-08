@@ -11,19 +11,18 @@
   justify-content: space-between;
   padding: var(--page-padding-desktop);
   overflow-x: hidden;
+  height: 100%;
 }
 
 #groupped-packages {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .package-card {
   width: 18vw;
-}
-
-#groupped-packages #second-card {
-  margin: min(10vh, 80px) 0 0 10vw;
 }
 
 #packages-page .package-name {
