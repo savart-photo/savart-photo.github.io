@@ -4,18 +4,16 @@
   --page-padding-desktop: 48px;
 }
 
-
 #portfolio-page {
   padding: var(--page-padding-desktop);
   overflow-x: hidden;
+  height: 100%;
 }
-
 
 #portfolio-covers #food,
 #portfolio-covers #portraits {
   height: 48%;
 }
-
 
 #portfolio-covers {
   display: flex;
@@ -23,20 +21,17 @@
   height: 100%;
 }
 
-
 #portfolio-page img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-
 #product,
 #food,
 #portraits {
   position: relative;
 }
-
 
 #product .cover-description,
 #food .cover-description,
@@ -54,18 +49,15 @@
   color: var(--black);
 }
 
-
 #food .cover-description,
 #portraits .cover-description {
   height: 48px;
 }
 
-
 #product {
   width: 55%;
   margin-right: 24px;
 }
-
 
 #portfolio-container {
   display: flex;
