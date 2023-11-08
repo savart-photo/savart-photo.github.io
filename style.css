@@ -1,10 +1,10 @@
 :root {
   --body-bgc: #ebe9e7;
   --black: #232323;
+  --contact-link-bgc: #23232333;
   --link-active-color: #5a5a5a;
   --outfit-font: "Outfit", sans-serif;
   --quattrocento-font: "Quattrocento", serif;
-
 
   /* DESKTOP FONTS */
   --quattrocento-desktop: 152px;
@@ -12,13 +12,11 @@
   --header-padding-desktop: 48px 48px 24px 48px;
   --page-padding-desktop: 48px;
 
-
   /* TABLET FONTS */
   --quattrocento-tablet: 96px;
   --outfit-tablet: 64px;
-  --header-padding-tablet: 40px;
+  --header-padding-tablet: min(40px, 2vh);
   --page-padding-tablet: 30px;
-
 
   /* MOBILE FONTS */
   --quattrocento-mobile: min(15vw, 56px);
@@ -27,24 +25,20 @@
   --page-padding-mobile: 0px;
   --title-mobile-height: 160px;
 
-
   /* FRAME XL*/
   --xl-frame: 88px;
   --xl-header-height: 248px;
   --xl-footer: 200px;
-
 
   /* FRAME L*/
   --l-frame: 64px;
   --l-header-height: 200px;
   --l-footer: 208px;
 
-
   /* FRAME M*/
   --m-frame: 48px;
   --m-header-height: 176px;
   --m-footer: 160px;
-
 
   /* FRAME s*/
   --s-frame: 24px;
@@ -52,13 +46,11 @@
   --s-footer: 132px;
 }
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 
 html,
 body {
@@ -66,14 +58,12 @@ body {
   height: 100vh;
 }
 
-
 body {
   padding: 0 var(--xl-frame);
   background-color: var(--body-bgc);
   animation: fadein 0.8s ease-in;
   overflow: hidden;
 }
-
 
 /* HEADER */
 header {
@@ -89,11 +79,9 @@ header {
   justify-content: space-between;
 }
 
-
 nav {
   display: none;
 }
-
 
 li {
   list-style-type: none;
@@ -101,17 +89,27 @@ li {
   font-weight: 300;
 }
 
-
 li:not(:last-child) {
   margin-right: calc(var(--xl-frame) / 2);
 }
-
 
 a {
   text-decoration: none;
   color: var(--black);
 }
 
+.book-btn {
+  background-color: var(--black);
+  font-family: var(--outfit-font);
+  color: #fff;
+  padding: 12px 3vw;
+  border: none;
+  border-radius: 12px;
+  margin-top: 24px;
+  font-weight: 300;
+  width: 100%;
+  height: 56px;
+}
 
 .title {
   width: 100%;
@@ -121,13 +119,11 @@ a {
   font-family: var(--quattrocento-font);
 }
 
-
 .title h1 {
   font-size: var(--quattrocento-desktop);
   font-weight: 400;
   line-height: 1;
 }
-
 
 .title h2 {
   margin-left: 30px;
@@ -136,13 +132,11 @@ a {
   line-height: 1.2;
 }
 
-
 .links {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-
 
 /* MAIN */
 #scrollable-page-content {
@@ -153,7 +147,6 @@ a {
   border-right: 1px solid var(--black);
 }
 
-
 footer {
   height: var(--xl-footer);
   border-top: 1px solid var(--black);
@@ -162,14 +155,12 @@ footer {
   align-items: center;
 }
 
-
 footer #icons {
   display: flex;
   justify-content: flex-end;
   margin-right: 3vw;
   width: 40%;
 }
-
 
 footer #author {
   margin-left: 2.6vw;
@@ -179,11 +170,9 @@ footer #author {
   width: 40%;
 }
 
-
 footer #icons svg {
   margin-right: 24px;
 }
-
 
 /* SMALL DESCTOP FRAME */
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
@@ -192,13 +181,11 @@ footer #icons svg {
   }
 }
 
-
 /* TABLET */
 @media screen and (max-width: 1279px) and (min-width: 744px) {
   body {
     padding: 0 var(--m-frame);
   }
-
 
   .header {
     padding: var(--header-padding-tablet);
@@ -206,32 +193,28 @@ footer #icons svg {
     justify-content: space-between;
   }
 
-
   #scrollable-page-content {
     width: 100%;
     height: calc(100% - var(--m-header-height));
     overflow-y: scroll;
   }
 
-
   #main-page,
   #about-page,
   #portfolio-page,
-  #packages-page {
+  #packages-page,
+  #contacts-page {
     padding: var(--header-padding-tablet);
     width: 100%;
   }
 
-
   .title h1 {
     font-size: var(--quattrocento-tablet);
   }
-
   .title h2 {
     font-size: var(--outfit-tablet);
     margin-left: 20px;
   }
-
 
   .links {
     width: 100%;
@@ -239,25 +222,35 @@ footer #icons svg {
     justify-content: space-between;
   }
 
-
   #product .cover-description,
   #food .cover-description,
   #portraits .cover-description {
     font-size: 20px;
   }
 
+  #about-page #greeting h2 {
+    font-size: 56px;
+  }
 
+  #about-page #greeting-text p {
+    font-size: 16px;
+  }
+
+  footer {
+    height: var(--m-footer);
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 744px) and (min-height: 500px) {
   #portfolio-covers #food,
   #portfolio-covers #portraits {
     height: 50%;
   }
 
-
   #portfolio-covers {
     flex-direction: column;
     width: 100%;
   }
-
 
   #portfolio-covers #product {
     width: 100%;
@@ -266,28 +259,21 @@ footer #icons svg {
     margin: 0 0 10px 0;
   }
 
-
   #portfolio-covers #portfolio-container {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
+    height: 50%;
   }
-
 
   #portfolio-covers #food,
   #portfolio-covers #portraits {
     width: 49%;
-    height: 304px;
+    height: 100%;
     object-fit: cover;
   }
-
-
-  footer {
-    height: var(--m-footer);
-  }
 }
-
 
 /* Removing left column and enabling vertical photo */
 @media screen and (max-width: 1023px) and (min-width: 0px) {
@@ -296,12 +282,10 @@ footer #icons svg {
     width: 100%;
   }
 
-
   #main-photo-desctiption,
   #main-photo {
     display: none;
   }
-
 
   #vertical-main-page {
     display: flex;
@@ -310,7 +294,6 @@ footer #icons svg {
     width: 100%;
     position: relative;
   }
-
 
   #vertical-main-text {
     position: absolute;
@@ -321,37 +304,30 @@ footer #icons svg {
     padding: 32px 40px;
   }
 
-
   #packages-page {
     display: block;
   }
-
 
   #groupped-packages {
     display: block;
   }
 
-
   .package-text {
     width: 40%;
   }
 
-
   #packages-page .package-name {
     margin-top: 0;
   }
-
 
   #packages-page img {
     width: 35vw;
     height: 39vw;
   }
 
-
   #groupped-packages #second-card {
     margin: 0 0 10px 0;
   }
-
 
   .package-card {
     width: 100%;
@@ -360,22 +336,93 @@ footer #icons svg {
     display: flex;
     justify-content: space-between;
   }
-}
 
+  #about-page {
+    flex-wrap: wrap;
+  }
+
+  #about-page #greeting h2 {
+    font-size: 56px;
+  }
+
+  #about-page #greeting-text {
+    margin-top: 5vh;
+  }
+
+  #about-page #greeting-text p {
+    font-size: max(1.5vw, 12px);
+  }
+
+  #about-description {
+    width: 50%;
+  }
+
+  #greeting-text {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #about-page #greeting-text p {
+    width: 100%;
+  }
+
+  #about-photo {
+    display: none;
+  }
+
+  #about-bw-photo {
+    width: 40%;
+  }
+
+  #about-horizontal-photo {
+    display: block;
+    width: 100%;
+    margin-top: 48px;
+  }
+
+  #about-horizontal-photo img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  #contacts-page {
+    flex-direction: column-reverse;
+  }
+
+  #contacts-photo-container {
+    width: 100%;
+    margin-top: 48px;
+  }
+
+  #contacts-and-text {
+    width: 100%;
+  }
+
+  .social-link {
+    padding: 8px 12px;
+    border: 1px solid var(--black);
+    border-radius: 12px;
+    width: fit-content;
+  }
+
+  #contacts-and-text #join-me-text {
+    margin-bottom: 48px;
+  }
+}
 
 /* Moving main text above image */
 @media screen and (max-width: 743px) and (min-width: 0px) {
   body {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   #main-page,
   #about-page,
   #portfolio-page,
-  #packages-page {
+  #packages-page,
+  #contacts-page {
     height: auto;
   }
-
 
   #vertical-main-page {
     display: flex;
@@ -384,7 +431,6 @@ footer #icons svg {
     width: 100%;
     position: relative;
   }
-
 
   #vertical-main-text {
     position: relative;
@@ -395,17 +441,18 @@ footer #icons svg {
     padding: 16px 0 24px 0;
   }
 
+  #about-horizontal-photo {
+    margin-top: 24px;
+  }
 
   #packages-page .package-description {
     font-size: 16px;
   }
 
-
   footer {
     height: var(--s-footer);
   }
 }
-
 
 /* Small tablet/big phone screen */
 @media screen and (max-width: 743px) and (min-width: 580px) {
@@ -413,47 +460,40 @@ footer #icons svg {
     padding: 0 var(--m-frame);
   }
 
-
   .header {
     padding: var(--header-padding-tablet);
     height: min(var(--s-header-height), 22vh);
   }
 
-
   #scrollable-page-content {
     height: calc(100% - min(var(--s-header-height), 22vh));
   }
 
-
   #main-page,
   #about-page,
   #portfolio-page,
-  #packages-page {
+  #packages-page,
+  #contacts-page {
     padding: var(--header-padding-tablet);
   }
-
 
   .title h1 {
     font-size: 12vw;
   }
-
   .title h2 {
     font-size: 8vw;
     margin-left: 15px;
   }
-
 
   .links {
     justify-content: space-between;
     font-size: 1.8vw;
   }
 
-
   #portfolio-covers {
     flex-direction: column;
     width: 100%;
   }
-
 
   #portfolio-covers #product {
     width: 100%;
@@ -462,21 +502,19 @@ footer #icons svg {
     margin-bottom: 10px;
   }
 
-
   #portfolio-covers #portfolio-container {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
+    height: 50%;
   }
-
 
   #portfolio-covers #food,
   #portfolio-covers #portraits {
     width: 49%;
-    height: 304px;
+    height: 100%;
   }
-
 
   #packages-page img {
     width: 35vw;
@@ -485,13 +523,12 @@ footer #icons svg {
   }
 }
 
-
 /* MOBILE */
-@media screen and (max-width: 579px) and (min-width: 0px) {
+@media screen and (max-width: 579px) and (min-width: 0px), (max-height: 500px) {
   body {
     padding: 0 var(--s-frame);
+    overflow-y: auto;
   }
-
 
   .header {
     padding: var(--header-padding-mobile);
@@ -500,20 +537,18 @@ footer #icons svg {
     flex-direction: column;
   }
 
-
   #scrollable-page-content {
     height: calc(100% - var(--header-padding-mobile));
     border: none;
   }
 
-
   #main-page,
   #about-page,
   #portfolio-page,
-  #packages-page {
-    padding: var(--header-padding-mobile);
+  #packages-page,
+  #contacts-page {
+    padding: 0 0 var(--header-padding-mobile);
   }
-
 
   .title {
     align-items: center;
@@ -524,16 +559,13 @@ footer #icons svg {
     margin-top: 12px;
   }
 
-
   .title h1 {
     font-size: var(--quattrocento-mobile);
   }
-
   .title h2 {
     font-size: var(--outfit-mobile);
     margin: 0;
   }
-
 
   #main-title {
     flex-direction: column;
@@ -541,50 +573,40 @@ footer #icons svg {
     align-items: flex-start;
   }
 
-
   #main-title h1 {
     font-size: min(21vw, 88px);
   }
-
 
   #main-title h2 {
     --outfit-mobile: min(11.5vw, 44px);
   }
 
-
   .links {
     display: none;
   }
-
 
   li {
     margin-right: calc(var(--s-frame) / 2);
   }
 
-
   main {
     border: 0;
   }
-
 
   #main-page {
     display: block;
     width: 100%;
   }
 
-
   #main-photo-desctiption {
     display: none;
   }
 
-
   /* NAVIGATION */
-
 
   nav {
     display: block;
   }
-
 
   #menuToggle {
     display: flex;
@@ -595,17 +617,14 @@ footer #icons svg {
     user-select: none;
   }
 
-
   #menuToggle a {
     text-decoration: none;
     color: #232323;
   }
 
-
   #menuToggle a:hover {
     color: var(--link-active-color);
   }
-
 
   #menuToggle input {
     display: block;
@@ -613,17 +632,14 @@ footer #icons svg {
     height: 32px;
     cursor: pointer;
     position: absolute;
-    opacity: 0;
-    /* hide this */
-    z-index: 999;
-    /* and place it over the hamburger */
+    opacity: 0; /* hide this */
+    z-index: 999; /* and place it over the hamburger */
     -webkit-touch-callout: none;
   }
 
-
   /*
-* Just a quick hamburger
-*/
+ * Just a quick hamburger
+ */
   #menuToggle span {
     display: block;
     width: 33px;
@@ -636,34 +652,28 @@ footer #icons svg {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
-
   #menuToggle span:first-child {
     transform-origin: 0% 0%;
   }
-
 
   #menuToggle span:nth-last-child(2) {
     transform-origin: 0% 100%;
   }
 
-
-  #menuToggle input:checked~span {
+  #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg);
     background: var(--black);
   }
 
-
-  #menuToggle input:checked~span:nth-last-child(3) {
+  #menuToggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
 
-
-  #menuToggle input:checked~span:nth-last-child(2) {
+  #menuToggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(-6px, 6px);
   }
-
 
   #menu {
     display: flex;
@@ -679,30 +689,25 @@ footer #icons svg {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
-
   #menu li {
     padding: 10px 0;
     margin: 0 20px;
     font-size: min(4vw, 24px);
   }
 
-
   #menuToggle ul {
     height: 0;
     transition: all 0.5s;
   }
 
-
-  #menuToggle input:checked~ul {
+  #menuToggle input:checked ~ ul {
     transform: none;
     height: 150px;
   }
 
-
   #portfolio-covers {
     flex-direction: column;
   }
-
 
   #portfolio-covers #product {
     width: 100%;
@@ -710,13 +715,11 @@ footer #icons svg {
     margin: 0 0 10px;
   }
 
-
   #portfolio-container {
     flex-direction: column;
     width: 100%;
     margin-bottom: 10px;
   }
-
 
   #portfolio-container #food,
   #portfolio-container #portraits {
@@ -724,27 +727,22 @@ footer #icons svg {
     display: flex;
   }
 
-
   #portfolio-container #food {
     margin-bottom: 10px;
   }
 
-
   .package-card {
     flex-direction: column;
   }
-
 
   #groupped-packages #second-card,
   .package-card {
     margin: 0 0 36px 0;
   }
 
-
   .package-text {
     width: 100%;
   }
-
 
   #packages-page img {
     width: 100%;
@@ -753,37 +751,71 @@ footer #icons svg {
     margin-bottom: 16px;
   }
 
+  #about-description {
+    width: 100%;
+  }
+
+  #about-bw-photo {
+    display: none;
+  }
+
+  #about-vertical-photo {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+  }
+
+  #about-vertical-photo img {
+    width: 70%;
+  }
+
+  #about-page #greeting h2 {
+    font-size: 44px;
+  }
+
+  #about-page #greeting-text {
+    margin-top: 24px;
+  }
+
+  #about-page #greeting-text p {
+    font-size: 16px;
+  }
 
   footer #icons svg {
     margin-right: 3vw;
   }
 
-
   footer #author {
     text-align: center;
   }
-}
 
+  #contact-me {
+    width: 100%;
+    height: 56px;
+  }
+
+  .social-link:hover,
+  .social-link:active {
+    background-color: var(--contact-link-bgc);
+  }
+}
 
 /* Expanding height of the header for narrow devices */
 @media screen and (max-height: 400px) and (min-height: 0px) {
-  .header {
+  /* .header {
     padding: var(--header-padding-tablet);
     height: 180px;
-  }
+  } */
 
-
-  #scrollable-page-content {
+  /* #scrollable-page-content {
     height: calc(100% - var(--header-padding-tablet));
-  }
+  } */
 }
-
 
 @keyframes fadein {
   from {
     opacity: 0;
   }
-
 
   to {
     opacity: 1;
