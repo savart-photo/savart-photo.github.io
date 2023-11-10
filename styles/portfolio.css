@@ -1,6 +1,6 @@
 :root {
   --quattrocento-font: "Quattrocento", serif;
-  --quattrocento-desktop: 152px;
+  --quattrocento-desktop: 10vh;
   --page-padding-desktop: 48px;
 }
 
@@ -12,13 +12,17 @@
 
 #portfolio-covers #food,
 #portfolio-covers #portraits {
-  height: 48%;
+  height: calc(50% - 8px);
 }
 
 #portfolio-covers {
   display: flex;
   width: 100%;
   height: 100%;
+}
+
+#portfolio-covers p {
+  font-family: var(--quattrocento-font);
 }
 
 #portfolio-page img {
@@ -56,7 +60,7 @@
 
 #product {
   width: 55%;
-  margin-right: 24px;
+  margin-right: 16px;
 }
 
 #portfolio-container {

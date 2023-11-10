@@ -11,7 +11,7 @@
   justify-content: space-between;
   padding: var(--page-padding-desktop);
   overflow-x: hidden;
-  height: 100%;
+  /* height: 100%; */
 }
 
 #groupped-packages {
@@ -22,13 +22,13 @@
 }
 
 .package-card {
-  width: 18vw;
+  width: 25vw;
 }
 
 #packages-page .package-name {
   font-family: var(--quattrocento-font);
   font-size: 30px;
-  margin: 24px 0;
+  margin: 16px 0;
 }
 
 #packages-page .package-description {
@@ -37,7 +37,13 @@
 }
 
 #packages-page img {
-  width: 18vw;
-  height: 24vw;
+  width: 25vw;
+  height: 30vw;
   object-fit: cover;
 }
+
+/* // packages in 500px height */
+
+/* footer height 16vh, 12vh */
+
+/* main content above footer same as side padding */

@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Get your product, food or portrait photoshoot in Seattle Washington"
+      content="Product, commercial photography in Seattle Washington."
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href="./assets/logo.svg" type="image/x-icon" />
@@ -14,10 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Quattrocento&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/contacts.css" />
+    <link rel="stylesheet" href="./styles/gallery.css" />
     <link rel="stylesheet" href="./style.css" />
-    <script defer src="./main.js"></script>
-    <title>SavArt Photo Contacts</title>
+    <script defer src="./gallery.js"></script>
+    <title>SavArt Photo Product Gallery</title>
   </head>
   <body>
     <header class="header">
@@ -43,82 +44,184 @@
         <li><a href="./packages.html">PACKAGES</a></li>
         <li><a href="./contacts.html">CONTACTS</a></li>
       </ui>
-      <div class="title">
-        <h1>CONTACTS</h1>
+      <div class="title" id="album-title">
+        <h1>PRODUCT</h1>
       </div>
     </header>
     <div id="scrollable-page-content">
-      <div id="contacts-page">
-        <div id="contacts-photo-container">
-          <img src="./assets/contacts/contactsPhoto.jpg" alt="" srcset="" />
+      <div id="gallery">
+        <div id="breadcrumbs">
+          <a href="./portfolio.html">PORTFOLIO</a> &#x2022;
+          <a href="./product.html">PRODUCT</a>
         </div>
-        <div id="contacts-and-text">
-          <p id="join-me-text">
-            You'd like to book a shoot, have a question, or just want to get in
-            touch — I'd love to hear from you. Let's get in contact!
-          </p>
-          <div id="social-links">
-            <div class="social-link">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 22 22"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.0082 5.60977C8.02695 5.60977 5.62227 8.01445 5.62227 10.9957C5.62227 13.977 8.02695 16.3816 11.0082 16.3816C13.9895 16.3816 16.3941 13.977 16.3941 10.9957C16.3941 8.01445 13.9895 5.60977 11.0082 5.60977ZM11.0082 14.4973C9.08164 14.4973 7.50664 12.927 7.50664 10.9957C7.50664 9.06445 9.07695 7.49414 11.0082 7.49414C12.9395 7.49414 14.5098 9.06445 14.5098 10.9957C14.5098 12.927 12.9348 14.4973 11.0082 14.4973ZM17.8707 5.38945C17.8707 6.08789 17.3082 6.6457 16.6145 6.6457C15.916 6.6457 15.3582 6.0832 15.3582 5.38945C15.3582 4.6957 15.9207 4.1332 16.6145 4.1332C17.3082 4.1332 17.8707 4.6957 17.8707 5.38945ZM21.4379 6.66445C21.3582 4.98164 20.9738 3.49102 19.741 2.26289C18.5129 1.03477 17.0223 0.650391 15.3395 0.566016C13.6051 0.467578 8.40664 0.467578 6.67227 0.566016C4.99414 0.645703 3.50352 1.03008 2.2707 2.2582C1.03789 3.48633 0.658203 4.97695 0.573828 6.65977C0.475391 8.39414 0.475391 13.5926 0.573828 15.327C0.653516 17.0098 1.03789 18.5004 2.2707 19.7285C3.50352 20.9566 4.98945 21.341 6.67227 21.4254C8.40664 21.5238 13.6051 21.5238 15.3395 21.4254C17.0223 21.3457 18.5129 20.9613 19.741 19.7285C20.9691 18.5004 21.3535 17.0098 21.4379 15.327C21.5363 13.5926 21.5363 8.39883 21.4379 6.66445ZM19.1973 17.1879C18.8316 18.1066 18.1238 18.8145 17.2004 19.1848C15.8176 19.7332 12.5363 19.6066 11.0082 19.6066C9.48008 19.6066 6.19414 19.7285 4.81602 19.1848C3.89727 18.8191 3.18945 18.1113 2.81914 17.1879C2.2707 15.8051 2.39727 12.5238 2.39727 10.9957C2.39727 9.46758 2.27539 6.18164 2.81914 4.80352C3.18477 3.88477 3.89258 3.17695 4.81602 2.80664C6.19883 2.2582 9.48008 2.38477 11.0082 2.38477C12.5363 2.38477 15.8223 2.26289 17.2004 2.80664C18.1191 3.17227 18.827 3.88008 19.1973 4.80352C19.7457 6.18633 19.6191 9.46758 19.6191 10.9957C19.6191 12.5238 19.7457 15.8098 19.1973 17.1879Z"
-                  fill="black"
-                />
-              </svg>
-              <a href="https://www.instagram.com/savartphoto" target="_blank"
-                >instagram.com/savartphoto</a
-              >
-            </div>
-
-            <div class="social-link">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16.0811 13.375L16.6921 9.39352H12.8717V6.8098C12.8717 5.72055 13.4054 4.65879 15.1164 4.65879H16.8532V1.26898C16.8532 1.26898 15.2771 1 13.7702 1C10.624 1 8.56754 2.90695 8.56754 6.35906V9.39352H5.07031V13.375H8.56754V23H12.8717V13.375H16.0811Z"
-                  fill="black"
-                />
-              </svg>
-
-              <a href="https://www.facebook.com/SavArtPhoto" target="_blank"
-                >facebook.com/SavArtPhoto</a
-              >
-            </div>
-            <div class="social-link">
-              <svg
-                width="24"
-                height="18"
-                viewBox="0 0 24 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 2.25C2.5875 2.25 2.25 2.5875 2.25 3V4.03594L10.3359 10.6734C11.3062 11.4703 12.6984 11.4703 13.6688 10.6734L21.75 4.03594V3C21.75 2.5875 21.4125 2.25 21 2.25H3ZM2.25 6.94687V15C2.25 15.4125 2.5875 15.75 3 15.75H21C21.4125 15.75 21.75 15.4125 21.75 15V6.94687L15.0938 12.4125C13.2937 13.8891 10.7016 13.8891 8.90625 12.4125L2.25 6.94687ZM0 3C0 1.34531 1.34531 0 3 0H21C22.6547 0 24 1.34531 24 3V15C24 16.6547 22.6547 18 21 18H3C1.34531 18 0 16.6547 0 15V3Z"
-                  fill="black"
-                />
-              </svg>
-              <a href="mailto:savartphoto@gmail.com" target="_blank"
-                >savartphoto@gmail.com</a
-              >
-            </div>
+        <div id="photo-grid">
+          <div class="arrows" id="previous">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30 1L11 20L30 39"
+                stroke="#EBE9E7"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
           </div>
-          <a
-            href="mailto:savartphoto@gmail.com"
-            class="book-btn"
-            id="contact-me"
-            target="_blank"
-            >CONTACT ME</a
-          >
+          <div class="arrows" id="next">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 1L30 20L11 39"
+                stroke="#EBE9E7"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/1.jpg"
+            id="1"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/2.jpg"
+            id="2"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/3.jpg"
+            id="3"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/4.jpg"
+            id="4"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/5.jpg"
+            id="5"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/6.jpg"
+            id="6"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/7.jpg"
+            id="7"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/8.jpg"
+            id="8"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/9.jpg"
+            id="9"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/10.jpg"
+            id="10"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/11.jpg"
+            id="11"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/12.jpg"
+            id="12"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/13.jpg"
+            id="13"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/14.jpg"
+            id="14"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/15.jpg"
+            id="15"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/16.jpg"
+            id="16"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/17.jpg"
+            id="17"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/18.jpg"
+            id="18"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/19.jpg"
+            id="19"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/20.jpg"
+            id="20"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/21.jpg"
+            id="21"
+            alt=""
+          />
+          <img
+            class="gallery-item"
+            src="./assets/gallery/product/22.jpg"
+            id="22"
+            alt=""
+          />
+        </div>
+        <div id="back-to-top">
+          <a href="#gallery">Go back to top</a>
         </div>
       </div>
       <footer>

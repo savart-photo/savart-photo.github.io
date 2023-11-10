@@ -3,10 +3,12 @@
   --outfit-font: "Outfit", sans-serif;
   --quattrocento-font: "Quattrocento", serif;
   --page-padding-desktop: 48px;
+  --m-header-height: 15vh;
 }
 
 #contacts-page {
   width: 100%;
+  min-height: 100%;
   display: flex;
   justify-content: space-between;
   padding: var(--page-padding-desktop);
@@ -49,6 +51,10 @@
 }
 
 #contact-me {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.7;
   width: 272px;
   height: 56px;
 }
