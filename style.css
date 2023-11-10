@@ -7,15 +7,15 @@
   --quattrocento-font: "Quattrocento", serif;
 
   /* DESKTOP FONTS */
-  --quattrocento-desktop: 152px;
-  --outfit-desktop: 98px;
-  --header-padding-desktop: 48px 48px 24px 48px;
+  --quattrocento-desktop: 12vh;
+  --outfit-desktop: 7.5vh;
+  --header-padding-desktop: 3vh 48px 3vh 48px;
   --page-padding-desktop: 48px;
 
   /* TABLET FONTS */
-  --quattrocento-tablet: 96px;
-  --outfit-tablet: 64px;
-  --header-padding-tablet: min(40px, 2vh);
+  --quattrocento-tablet: 9vh;
+  --outfit-tablet: 6vh;
+  --header-padding-tablet: 24px 48px;
   --page-padding-tablet: 30px;
 
   /* MOBILE FONTS */
@@ -27,21 +27,19 @@
 
   /* FRAME XL*/
   --xl-frame: 88px;
-  --xl-header-height: 248px;
-  --xl-footer: 200px;
+  --xl-header-height: 20vh;
+  --xl-footer: 16vh;
 
   /* FRAME L*/
   --l-frame: 64px;
-  --l-header-height: 200px;
-  --l-footer: 208px;
 
   /* FRAME M*/
   --m-frame: 48px;
-  --m-header-height: 176px;
-  --m-footer: 160px;
+  --m-header-height: 15vh;
+  --m-footer: 12vh;
 
   /* FRAME s*/
-  --s-frame: 24px;
+  --s-frame: 32px;
   --s-header-height: 200px;
   --s-footer: 132px;
 }
@@ -73,7 +71,7 @@ header {
   border-right: 1px solid var(--black);
   border-bottom: 1px solid var(--black);
   padding: var(--header-padding-desktop);
-  padding-bottom: 24px;
+  /* padding-bottom: 24px; */
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
@@ -174,17 +172,18 @@ footer #icons svg {
   margin-right: 24px;
 }
 
-/* SMALL DESCTOP FRAME */
-@media screen and (max-width: 1439px) and (min-width: 1280px) {
-  body {
-    padding: 0 var(--m-frame);
-  }
+footer #logo {
+  height: 80%;
+}
+
+footer #logo svg {
+  height: 100%;
 }
 
 /* TABLET */
-@media screen and (max-width: 1279px) and (min-width: 744px) {
+@media screen and (max-width: 1280px) and (min-width: 745px) {
   body {
-    padding: 0 var(--m-frame);
+    padding: 0 var(--l-frame);
   }
 
   .header {
@@ -203,8 +202,9 @@ footer #icons svg {
   #about-page,
   #portfolio-page,
   #packages-page,
-  #contacts-page {
-    padding: var(--header-padding-tablet);
+  #contacts-page,
+  #gallery {
+    padding: 48px;
     width: 100%;
   }
 
@@ -236,12 +236,16 @@ footer #icons svg {
     font-size: 16px;
   }
 
+  #photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   footer {
     height: var(--m-footer);
   }
 }
 
-@media screen and (max-width: 900px) and (min-width: 744px) and (min-height: 500px) {
+@media screen and (max-width: 900px) and (min-width: 745px) and (min-height: 500px) {
   #portfolio-covers #food,
   #portfolio-covers #portraits {
     height: 50%;
@@ -256,7 +260,7 @@ footer #icons svg {
     width: 100%;
     max-height: 600px;
     overflow: hidden;
-    margin: 0 0 10px 0;
+    margin: 0 0 16px 0;
   }
 
   #portfolio-covers #portfolio-container {
@@ -269,14 +273,14 @@ footer #icons svg {
 
   #portfolio-covers #food,
   #portfolio-covers #portraits {
-    width: 49%;
+    width: calc(50% - 8px);
     height: 100%;
     object-fit: cover;
   }
 }
 
 /* Removing left column and enabling vertical photo */
-@media screen and (max-width: 1023px) and (min-width: 0px) {
+@media screen and (max-width: 1024px) and (min-width: 0px) {
   #main-page {
     display: block;
     width: 100%;
@@ -342,7 +346,7 @@ footer #icons svg {
   }
 
   #about-page #greeting h2 {
-    font-size: 56px;
+    font-size: 44px;
   }
 
   #about-page #greeting-text {
@@ -354,7 +358,7 @@ footer #icons svg {
   }
 
   #about-description {
-    width: 50%;
+    width: 55%;
   }
 
   #greeting-text {
@@ -402,16 +406,21 @@ footer #icons svg {
     padding: 8px 12px;
     border: 1px solid var(--black);
     border-radius: 12px;
-    width: fit-content;
+    width: 298px;
+    height: 40px;
   }
 
   #contacts-and-text #join-me-text {
     margin-bottom: 48px;
   }
+
+  #breadcrumbs a {
+    font-size: 14px;
+  }
 }
 
 /* Moving main text above image */
-@media screen and (max-width: 743px) and (min-width: 0px) {
+@media screen and (max-width: 744px) and (min-width: 0px) {
   body {
     overflow-y: auto;
   }
@@ -420,7 +429,8 @@ footer #icons svg {
   #about-page,
   #portfolio-page,
   #packages-page,
-  #contacts-page {
+  #contacts-page,
+  #gallery {
     height: auto;
   }
 
@@ -455,26 +465,27 @@ footer #icons svg {
 }
 
 /* Small tablet/big phone screen */
-@media screen and (max-width: 743px) and (min-width: 580px) {
+@media screen and (max-width: 744px) and (min-width: 580px) {
   body {
     padding: 0 var(--m-frame);
   }
 
   .header {
     padding: var(--header-padding-tablet);
-    height: min(var(--s-header-height), 22vh);
+    height: var(--m-header-height);
   }
 
   #scrollable-page-content {
-    height: calc(100% - min(var(--s-header-height), 22vh));
+    height: calc(100% - var(--m-header-height));
   }
 
   #main-page,
   #about-page,
   #portfolio-page,
   #packages-page,
-  #contacts-page {
-    padding: var(--header-padding-tablet);
+  #contacts-page,
+  #gallery {
+    padding: 40px;
   }
 
   .title h1 {
@@ -499,7 +510,8 @@ footer #icons svg {
     width: 100%;
     max-height: 472px;
     overflow: hidden;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    margin-right: 0;
   }
 
   #portfolio-covers #portfolio-container {
@@ -512,7 +524,7 @@ footer #icons svg {
 
   #portfolio-covers #food,
   #portfolio-covers #portraits {
-    width: 49%;
+    width: calc(50% - 8px);
     height: 100%;
   }
 
@@ -520,6 +532,12 @@ footer #icons svg {
     width: 35vw;
     height: 45vw;
     object-fit: cover;
+  }
+
+  #photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
   }
 }
 
@@ -546,7 +564,8 @@ footer #icons svg {
   #about-page,
   #portfolio-page,
   #packages-page,
-  #contacts-page {
+  #contacts-page,
+  #gallery {
     padding: 0 0 var(--header-padding-mobile);
   }
 
@@ -709,16 +728,20 @@ footer #icons svg {
     flex-direction: column;
   }
 
+  #portfolio-covers p {
+    font-size: 20px;
+  }
+
   #portfolio-covers #product {
     width: 100%;
     height: 100vw;
-    margin: 0 0 10px;
+    margin: 0 0 16px;
   }
 
   #portfolio-container {
     flex-direction: column;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
 
   #portfolio-container #food,
@@ -728,7 +751,13 @@ footer #icons svg {
   }
 
   #portfolio-container #food {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+  }
+
+  #portfolio-covers #product,
+  #portfolio-covers #food,
+  #portfolio-covers #portraits {
+    height: 332px;
   }
 
   .package-card {
@@ -737,7 +766,7 @@ footer #icons svg {
 
   #groupped-packages #second-card,
   .package-card {
-    margin: 0 0 36px 0;
+    margin: 0 0 48px 0;
   }
 
   .package-text {
@@ -790,26 +819,45 @@ footer #icons svg {
   }
 
   #contact-me {
+    display: block;
     width: 100%;
+    text-align: center;
     height: 56px;
+  }
+
+  .social-link {
+    width: 100%;
   }
 
   .social-link:hover,
   .social-link:active {
     background-color: var(--contact-link-bgc);
   }
+
+  #photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+  }
+
+  .arrows svg {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  #album-title h1 {
+    font-size: 44px;
+  }
 }
 
-/* Expanding height of the header for narrow devices */
-@media screen and (max-height: 400px) and (min-height: 0px) {
-  /* .header {
-    padding: var(--header-padding-tablet);
-    height: 180px;
-  } */
+@media screen and (max-height: 500px) {
+  #portfolio-container #food {
+    margin-right: 8px;
+  }
 
-  /* #scrollable-page-content {
-    height: calc(100% - var(--header-padding-tablet));
-  } */
+  #portfolio-container #portraits {
+    margin-left: 8px;
+  }
 }
 
 @keyframes fadein {
