@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Quattrocento&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/overview.css" />
+    <link rel="stylesheet" href="./styles/homeStyle.css" />
     <link rel="stylesheet" href="./style.css" />
     <title>SavArt Photo</title>
   </head>
@@ -29,19 +29,21 @@
           <span></span>
           <ul id="menu">
             <a href="./index.html"><li>HOME</li></a>
-            <a href="./portfolio.html"><li>PORTFOLIO</li></a>
-            <a href="./about.html"><li>ABOUT</li></a>
+            <a href="./product.html"><li>PRODUCT</li></a>
+            <a href="./food.html"><li>FOOD</li></a
+            ><a href="./portraits.html"><li>PORTRAITS</li></a>
             <a href="./packages.html"><li>PACKAGES</li></a>
-            <a href="./contacts.html"><li>CONTACTS</li></a>
+            <a href="./about.html"><li>ABOUT</li></a>
           </ul>
         </div>
       </nav>
       <ui class="links">
         <li><a href="./index.html">HOME</a></li>
-        <li><a href="./portfolio.html">PORTFOLIO</a></li>
-        <li><a href="./about.html">ABOUT</a></li>
+        <li><a href="./product.html">PRODUCT</a></li>
+        <li><a href="./food.html">FOOD</a></li>
+        <li><a href="./portraits.html">PORTRAITS</a></li>
         <li><a href="./packages.html">PACKAGES</a></li>
-        <li><a href="./contacts.html">CONTACTS</a></li>
+        <li><a href="./about.html">ABOUT</a></li>
       </ui>
       <div class="title" id="main-title">
         <h1>SavArt</h1>
@@ -50,27 +52,38 @@
     </header>
     <div id="scrollable-page-content">
       <div id="main-page">
-        <div id="main-photo">
-          <img src="./assets/main/main.png" alt="" />
-        </div>
-        <div id="main-photo-desctiption">
-          <img src="./assets/main/bgc.png" alt="" />
+        <div id="intro-text">
+          <div id="greeting">
+            <h2>Hello there!</h2>
+            <h2>I'm Natalia,</h2>
+          </div>
+
           <p id="main-description-text">
             I am Natalia, food, product and portrait photographer based in
             Seattle, WA.
-            <br />I capture flavor in every frame and let your product tell its
-            story. My goal is to help you increase your business and product
-            sales.
+            <br /><br /><br />I capture flavor in every frame and let your
+            product tell its story. My goal is to help you increase your
+            business and product sales.
           </p>
         </div>
-        <div id="vertical-main-page">
-          <p id="vertical-main-text">
-            I am Natalia, food & product photographer based in Seattle, WA.
-            <br />I capture flavor in every frame and let your product tell its
-            story. My goal is to help you increase your business and product
-            sales.
-          </p>
-          <img id="verticalMain" src="./assets/main/verticalMain.png" alt="" />
+        <div id="portfolio-covers">
+          <div id="product">
+            <a href="./product.html">
+              <img src="./assets/portfolio/product.png" alt="" />
+              <div class="cover-description"><p>PRODUCT</p></div>
+            </a>
+          </div>
+
+          <div id="portfolio-container">
+            <a href="./food.html" id="food">
+              <img src="./assets/portfolio/food.png" alt="" />
+              <div class="cover-description"><p>FOOD</p></div>
+            </a>
+            <a href="./portraits.html" id="portraits">
+              <img src="./assets/portfolio/portraits.png" alt="" />
+              <div class="cover-description"><p>PORTRAITS</p></div>
+            </a>
+          </div>
         </div>
       </div>
       <footer>
