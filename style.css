@@ -15,15 +15,15 @@
   /* TABLET FONTS */
   --quattrocento-tablet: 9vh;
   --outfit-tablet: 6vh;
-  --header-padding-tablet: 24px 48px;
+  --header-padding-tablet: min(24px, 2vh) 40px;
   --page-padding-tablet: 30px;
 
   /* MOBILE FONTS */
   --quattrocento-mobile: min(15vw, 56px);
   --outfit-mobile: min(11.5vw, 44px);
-  --header-padding-mobile: 12px 0;
+  --header-padding-mobile: 12px 0 0 0;
   --page-padding-mobile: 0px;
-  --title-mobile-height: 160px;
+  --title-mobile-height: 140px;
 
   /* FRAME XL*/
   --xl-frame: 88px;
@@ -35,7 +35,7 @@
 
   /* FRAME M*/
   --m-frame: 48px;
-  --m-header-height: 15vh;
+  --m-header-height: max(15vh, 120px);
   --m-footer: 12vh;
 
   /* FRAME s*/
@@ -140,7 +140,7 @@ a {
 #scrollable-page-content {
   width: 100%;
   height: calc(100% - var(--xl-header-height));
-  overflow-y: scroll;
+  overflow-y: auto;
   border-left: 1px solid var(--black);
   border-right: 1px solid var(--black);
 }
@@ -195,7 +195,7 @@ footer #logo svg {
   #scrollable-page-content {
     width: 100%;
     height: calc(100% - var(--m-header-height));
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   #main-page,
@@ -206,6 +206,11 @@ footer #logo svg {
   #gallery {
     padding: 48px;
     width: 100%;
+  }
+
+  /* NEW FOOTER */
+  #main-page {
+    min-height: calc(100% - var(--m-footer));
   }
 
   .title h1 {
@@ -245,70 +250,27 @@ footer #logo svg {
   }
 }
 
-@media screen and (max-width: 900px) and (min-width: 745px) and (min-height: 500px) {
-  #portfolio-covers #food,
-  #portfolio-covers #portraits {
-    height: 50%;
+/* Removing left column and enabling vertical photo */
+@media screen and (max-width: 1024px) and (min-width: 0px) {
+  li:not(:last-child) {
+    margin-right: 0;
   }
 
-  #portfolio-covers {
+  #main-page {
     flex-direction: column;
     width: 100%;
   }
-
-  #portfolio-covers #product {
-    width: 100%;
-    max-height: 600px;
-    overflow: hidden;
-    margin: 0 0 16px 0;
+  /* new home */
+  #intro-text {
+    width: 80%;
   }
 
-  #portfolio-covers #portfolio-container {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-    height: 50%;
-  }
-
-  #portfolio-covers #food,
-  #portfolio-covers #portraits {
-    width: calc(50% - 8px);
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-/* Removing left column and enabling vertical photo */
-@media screen and (max-width: 1024px) and (min-width: 0px) {
-  #main-page {
-    display: block;
+  /* new home */
+  #portfolio-covers {
     width: 100%;
   }
 
-  #main-photo-desctiption,
-  #main-photo {
-    display: none;
-  }
-
-  #vertical-main-page {
-    display: flex;
-    justify-content: flex-end;
-    height: 100%;
-    width: 100%;
-    position: relative;
-  }
-
-  #vertical-main-text {
-    position: absolute;
-    width: 45%;
-    font-size: 18px;
-    color: var(--black);
-    font-family: var(--outfit-font);
-    padding: 32px 40px;
-  }
-
-  #packages-page {
+  #intro-text #packages-page {
     display: block;
   }
 
@@ -329,16 +291,14 @@ footer #logo svg {
     height: 39vw;
   }
 
-  #groupped-packages #second-card {
-    margin: 0 0 10px 0;
-  }
-
   .package-card {
     width: 100%;
-    margin-bottom: 40px;
-    /* height: 25vh; */
     display: flex;
     justify-content: space-between;
+  }
+
+  .package-card:not(:last-child) {
+    margin-bottom: 40px;
   }
 
   #about-page {
@@ -408,14 +368,11 @@ footer #logo svg {
     border-radius: 12px;
     width: 298px;
     height: 40px;
+    text-decoration: none;
   }
 
   #contacts-and-text #join-me-text {
     margin-bottom: 48px;
-  }
-
-  #breadcrumbs a {
-    font-size: 14px;
   }
 }
 
@@ -434,14 +391,6 @@ footer #logo svg {
     height: auto;
   }
 
-  #vertical-main-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 100%;
-    position: relative;
-  }
-
   #vertical-main-text {
     position: relative;
     width: 100%;
@@ -457,6 +406,18 @@ footer #logo svg {
 
   #packages-page .package-description {
     font-size: 16px;
+  }
+
+  #about-page {
+    flex-direction: column;
+  }
+
+  #about-description {
+    width: 80%;
+  }
+
+  #about-bw-photo {
+    display: none;
   }
 
   footer {
@@ -501,33 +462,6 @@ footer #logo svg {
     font-size: 1.8vw;
   }
 
-  #portfolio-covers {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  #portfolio-covers #product {
-    width: 100%;
-    max-height: 472px;
-    overflow: hidden;
-    margin-bottom: 16px;
-    margin-right: 0;
-  }
-
-  #portfolio-covers #portfolio-container {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-    height: 50%;
-  }
-
-  #portfolio-covers #food,
-  #portfolio-covers #portraits {
-    width: calc(50% - 8px);
-    height: 100%;
-  }
-
   #packages-page img {
     width: 35vw;
     height: 45vw;
@@ -560,13 +494,14 @@ footer #logo svg {
     border: none;
   }
 
+  /*  NEW MOBILE PADDING */
   #main-page,
   #about-page,
   #portfolio-page,
   #packages-page,
   #contacts-page,
   #gallery {
-    padding: 0 0 var(--header-padding-mobile);
+    padding: var(--s-frame) 0;
   }
 
   .title {
@@ -588,7 +523,6 @@ footer #logo svg {
 
   #main-title {
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: flex-start;
   }
 
@@ -598,6 +532,25 @@ footer #logo svg {
 
   #main-title h2 {
     --outfit-mobile: min(11.5vw, 44px);
+  }
+
+  /* new home */
+  #main-page #greeting h2 {
+    font-size: 10vw;
+  }
+
+  /* new home */
+  #portfolio-covers {
+    flex-direction: column;
+  }
+
+  /* new home */
+  #portfolio-covers #product {
+    width: 100%;
+  }
+
+  #portfolio-container {
+    width: 100%;
   }
 
   .links {
@@ -615,10 +568,6 @@ footer #logo svg {
   #main-page {
     display: block;
     width: 100%;
-  }
-
-  #main-photo-desctiption {
-    display: none;
   }
 
   /* NAVIGATION */
@@ -724,48 +673,11 @@ footer #logo svg {
     height: 150px;
   }
 
-  #portfolio-covers {
-    flex-direction: column;
-  }
-
-  #portfolio-covers p {
-    font-size: 20px;
-  }
-
-  #portfolio-covers #product {
-    width: 100%;
-    height: 100vw;
-    margin: 0 0 16px;
-  }
-
-  #portfolio-container {
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 16px;
-  }
-
-  #portfolio-container #food,
-  #portfolio-container #portraits {
-    width: 100%;
-    display: flex;
-  }
-
-  #portfolio-container #food {
-    margin-bottom: 16px;
-  }
-
-  #portfolio-covers #product,
-  #portfolio-covers #food,
-  #portfolio-covers #portraits {
-    height: 332px;
-  }
-
   .package-card {
     flex-direction: column;
   }
 
-  #groupped-packages #second-card,
-  .package-card {
+  .package-card:not(:last-child) {
     margin: 0 0 48px 0;
   }
 
@@ -840,7 +752,8 @@ footer #logo svg {
     grid-row-gap: 8px;
   }
 
-  .arrows svg {
+  .arrows svg,
+  #closeImgView {
     width: 5vw;
     height: 5vw;
   }

@@ -1,5 +1,6 @@
 :root {
   --black: #232323;
+  --body-bgc: #ebe9e7;
   --outfit-font: "Outfit", sans-serif;
   --quattrocento-font: "Quattrocento", serif;
   --page-padding-desktop: 48px;
@@ -34,16 +35,6 @@
   cursor: pointer;
   opacity: 0.7;
   transition: 300ms;
-}
-
-#breadcrumbs {
-  font-family: var(--outfit-font);
-  margin-bottom: 24px;
-}
-
-#breadcrumbs a {
-  font-size: 18px;
-  text-decoration: underline;
 }
 
 #back-to-top {
@@ -86,16 +77,11 @@
   display: flex;
   align-items: center;
   position: absolute;
-  color: #fff;
+  color: var(--body-bgc);
   padding: 7px;
   height: 100%;
   top: 0%;
   cursor: pointer;
-}
-
-.arrows:hover {
-  background-color: var(--black);
-  opacity: 0.7;
 }
 
 .lightbox-prev {
@@ -108,7 +94,40 @@
   justify-content: flex-end;
 }
 
+#closeImgView {
+  z-index: 9;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  stroke: var(--body-bgc);
+}
+
 .lightbox-prev:hover,
 .lightbox-next:hover {
   opacity: 0.8;
+}
+
+#loader {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #232323a9;
+  z-index: 10;
+  color: var(--body-bgc);
+  font-family: var(--outfit-font);
+}
+
+#loader svg {
+  width: 20vw;
+  height: fit-content;
+  object-fit: contain;
+  fill: var(--body-bgc);
+  margin-bottom: 16px;
 }
