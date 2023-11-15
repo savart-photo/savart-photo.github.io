@@ -6,16 +6,19 @@ const lightBoxImg = document.createElement("img");
 // Left/Right arrows
 const lightBoxPrev = document.getElementById("previous");
 const lightBoxNext = document.getElementById("next");
+const nextArrow = document.getElementById("next-arrow");
+const prevArrow = document.getElementById("previous-arrow");
+const closeBnt = document.getElementById("closeImgView");
 
 lightBoxContainer.classList.add("lightbox");
 lightBoxContent.classList.add("lightbox-content");
 lightBoxPrev.classList.add("lightbox-prev");
 lightBoxNext.classList.add("lightbox-next");
-lightBoxPrev.addEventListener("click", prevImage);
-lightBoxNext.addEventListener("click", nextImage);
+prevArrow.addEventListener("click", prevImage);
+nextArrow.addEventListener("click", nextImage);
 
 lightBoxContainer.appendChild(lightBoxContent);
-lightBoxContainer.addEventListener("click", closeLightBox);
+closeBnt.addEventListener("click", closeLightBox);
 
 lightBoxContent.appendChild(lightBoxImg);
 lightBoxContent.appendChild(lightBoxPrev);

@@ -1,4 +1,4 @@
-const numberOfPortraits = 101;
+const numberOfPortraits = 99;
 
 const photoGrid = document.getElementById("photo-grid");
 const loader = document.getElementById("loader");
