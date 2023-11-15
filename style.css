@@ -262,7 +262,7 @@ footer #logo svg {
   }
   /* new home */
   #intro-text {
-    width: 80%;
+    width: 100%;
   }
 
   /* new home */
@@ -580,7 +580,7 @@ footer #logo svg {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    z-index: 998;
+    z-index: 990;
     -webkit-user-select: none;
     user-select: none;
   }
@@ -601,7 +601,7 @@ footer #logo svg {
     cursor: pointer;
     position: absolute;
     opacity: 0; /* hide this */
-    z-index: 999; /* and place it over the hamburger */
+    z-index: 997; /* and place it over the hamburger */
     -webkit-touch-callout: none;
   }
 
@@ -615,7 +615,7 @@ footer #logo svg {
     margin: 3px;
     background: var(--black);
     border-radius: 3px;
-    z-index: 998;
+    z-index: 990;
     transform-origin: 1px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
@@ -755,7 +755,7 @@ footer #logo svg {
   .arrows svg,
   #closeImgView {
     width: 5vw;
-    height: 5vw;
+    height: 8vw;
   }
 
   #album-title h1 {
