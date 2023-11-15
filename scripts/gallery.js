@@ -84,11 +84,9 @@ function nextImage() {
 
 // Close if user clicked on lightbox outside all elements
 function closeLightBox(event) {
-  if (this === event.target) {
     scrollablePagePart.removeAttribute("style");
     document.body.removeAttribute("style");
     lightBoxContainer.style.display = "none";
-  }
 }
 
 // Creating a class to handle swipe left/right
