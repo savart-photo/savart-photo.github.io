@@ -27,6 +27,10 @@ function addImageProps(numOfImages) {
     img.setAttribute("class", "gallery-item");
     img.setAttribute("id", i);
     photoGrid.appendChild(img);
+    img.setAttribute(
+      "alt",
+      `Seattle, Washington product photography item ${i} of ${numOfImages}`
+    );
   }
 }
 
