@@ -26,6 +26,10 @@ function addImageProps(numOfImages) {
     img.setAttribute("src", `./assets/gallery/portraits/${i}.jpg`);
     img.setAttribute("class", "gallery-item");
     img.setAttribute("id", i);
+    img.setAttribute(
+      "alt",
+      `Seattle, Washington portrait photography item ${i} of ${numOfImages}`
+    );
     photoGrid.appendChild(img);
   }
 }
