@@ -1,4 +1,4 @@
-const numberOfFoodPhotos = 33;
+const numberOfFoodPhotos = 28;
 
 const photoGrid = document.getElementById("photo-grid");
 const loader = document.getElementById("loader");
@@ -26,6 +26,10 @@ function addImageProps(numOfImages) {
     img.setAttribute("src", `./assets/gallery/food/${i}.jpg`);
     img.setAttribute("class", "gallery-item");
     img.setAttribute("id", i);
+    img.setAttribute(
+      "alt",
+      `Seattle, Washington food photography item ${i} of ${numOfImages}`
+    );
     photoGrid.appendChild(img);
   }
 }
