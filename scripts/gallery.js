@@ -59,6 +59,7 @@ function showLightBox(n) {
   // Copying src of an image cover and adding it to an image inside lightbox
   let imageLocation = galleryItem[index - 1].getAttribute("src");
   lightBoxImg.setAttribute("src", imageLocation);
+  lightBoxImg.setAttribute("alt", "Enlarged portfolio photo");
 }
 
 // Changing next/prev images on arrow press or D/A keys for WASD users
@@ -84,9 +85,9 @@ function nextImage() {
 
 // Close if user clicked on lightbox outside all elements
 function closeLightBox(event) {
-    scrollablePagePart.removeAttribute("style");
-    document.body.removeAttribute("style");
-    lightBoxContainer.style.display = "none";
+  scrollablePagePart.removeAttribute("style");
+  document.body.removeAttribute("style");
+  lightBoxContainer.style.display = "none";
 }
 
 // Creating a class to handle swipe left/right
