@@ -55,6 +55,7 @@
   overflow: auto;
   top: 0;
   left: 0;
+  z-index: 998;
 }
 
 .lightbox-content {
@@ -81,6 +82,10 @@
   padding: 7px;
   height: 100%;
   top: 0%;
+}
+
+.lightbox-prev svg,
+.lightbox-next svg {
   cursor: pointer;
 }
 
@@ -95,7 +100,7 @@
 }
 
 #closeImgView {
-  z-index: 9;
+  z-index: 999;
   width: 30px;
   height: 30px;
   position: absolute;
