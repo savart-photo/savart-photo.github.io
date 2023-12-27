@@ -1,4 +1,4 @@
-const numberOfFoodPhotos = 28;
+const numberOfFoodPhotos = 45;
 
 const photoGrid = document.getElementById("photo-grid");
 const loader = document.getElementById("loader");
@@ -21,7 +21,7 @@ function renderImages() {
 }
 
 function addImageProps(numOfImages) {
-  for (let i = 1; i <= numOfImages; i += 1) {
+  for (let i = numOfImages; i >= 1; i -= 1) {
     const img = document.createElement("img");
     img.setAttribute("src", `./assets/gallery/food/${i}.jpg`);
     img.setAttribute("class", "gallery-item");
