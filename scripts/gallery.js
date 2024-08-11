@@ -57,7 +57,13 @@ function showLightBox(n) {
   }
 
   // Copying src of an image cover and adding it to an image inside lightbox
-  let imageLocation = galleryItem[index - 1].getAttribute("src");
+  const thumbnailPath = galleryItem[index - 1].getAttribute("src");
+  // ./assets/gallery/thumbnails/L/product/24.jpg
+  const pathArray = thumbnailPath.split("/");
+  const categoryAndImage = pathArray.slice(pathArray.length - 2).join("/");
+
+  const imageLocation = `./assets/gallery/${categoryAndImage}`;
+
   lightBoxImg.setAttribute("src", imageLocation);
   lightBoxImg.setAttribute("alt", "Enlarged portfolio photo");
 }
