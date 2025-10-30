@@ -22,7 +22,7 @@ function addImageProps(numOfImages, folderName) {
     photoGrid.appendChild(img);
     img.setAttribute(
       "alt",
-      `SavArt Photo - RTP North Carolina, ${folderName} photography item ${i} of ${numOfImages}`
+      `SavArt Photo - Bay Area, California ${folderName} photography item ${i} of ${numOfImages}`
     );
   }
 }
